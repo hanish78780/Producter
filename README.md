@@ -95,6 +95,22 @@ Productr is a full-stack, responsive product catalog management web application.
    ```
 4. Open the displayed local URL (typically `http://localhost:5173/` or `http://localhost:5174/`) in your browser.
 
+### 3. Run from the Project Root (Optional)
+You can manage the entire application directly from the root workspace directory using the scripts defined in the root `package.json`:
+
+1. **Install all dependencies** (installs both backend and frontend dependencies):
+   ```bash
+   npm run install-all
+   ```
+2. **Build client & run full-stack app**:
+   ```bash
+   npm run build
+   ```
+3. **Start the production server** (starts Express, serving the compiled React client statically):
+   ```bash
+   npm start
+   ```
+
 ---
 
 ## Running Lint & Build
