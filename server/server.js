@@ -26,9 +26,18 @@ app.use("/uploads", express.static(uploadsDir));
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/products", require("./routes/productRoutes"));
 
-app.get("/", (req, res) => {
-  res.send("Server Running");
-});
+// Serve static client files in production
+const clientBuildPath = path.join(__dirname, "../client/dist");
+if (fs.existsSync(clientBuildPath)) {
+  app.use(express.static(clientBuildPath));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(clientBuildPath, "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("Server Running (Client build not found)");
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
