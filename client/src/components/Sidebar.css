@@ -1,0 +1,91 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #141622; /* Dark blue-slate background */
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  border-right: 1px solid #232635;
+  font-family: 'Inter', sans-serif;
+}
+
+.sidebar-logo-container {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-logo {
+  height: 32px;
+  object-fit: contain;
+}
+
+.sidebar-search-box {
+  position: relative;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-search-icon {
+  position: absolute;
+  left: 14px;
+  color: #9ca3af;
+  font-size: 18px;
+}
+
+.sidebar-search-box input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #2d3142;
+  border-radius: 10px;
+  padding: 0 16px 0 44px;
+  background: #1f2233;
+  color: white;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-search-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: #25283c;
+}
+
+.sidebar-search-box input::placeholder {
+  color: #6b7280;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #94a3b8;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.menu-icon {
+  font-size: 20px;
+}
+
+.menu-item:hover {
+  background: #1f2233;
+  color: white;
+}
+
+.menu-item.active {
+  background: #0b1354; /* Dark blue active background to match login theme */
+  color: white;
+  font-weight: 600;
+}

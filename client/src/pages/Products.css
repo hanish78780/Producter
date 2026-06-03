@@ -1,0 +1,134 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.add-product-btn {
+  height: 44px;
+  padding: 0 20px;
+  background: #0b1354;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.add-product-btn:hover {
+  background: #060b33;
+  box-shadow: 0 4px 12px rgba(11, 19, 84, 0.2);
+}
+
+/* Empty State from Figma */
+.empty-state {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.empty-icon-figma {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+}
+
+.empty-icon-figma .square {
+  border: 3.5px dashed #cbd5e1;
+  border-radius: 6px;
+  aspect-ratio: 1;
+}
+
+.empty-icon-figma .plus {
+  font-size: 28px;
+  font-weight: 700;
+  color: #94a3b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-state h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b1354;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: #64748b;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  white-space: pre-line; /* handles \n newlines */
+}
+
+.empty-state-btn {
+  height: 48px;
+  padding: 0 28px;
+  background: #0b1354;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.empty-state-btn:hover {
+  background: #060b33;
+  box-shadow: 0 4px 12px rgba(11, 19, 84, 0.25);
+}
+
+/* Tabs for Home Page */
+.tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.tabs button:hover {
+  color: #0b1354;
+}
+
+.tabs button.active-tab {
+  color: #0b1354;
+}
+
+.tabs button.active-tab::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #0b1354;
+  border-radius: 3px 3px 0 0;
+}
