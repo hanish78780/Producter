@@ -10,13 +10,20 @@ function ProductCard({
   const imageCount = product.image ? 1 : 0;
   const exchangeStatus = product.exchange ? product.exchange.toUpperCase() : "NO";
 
+  const getImageUrl = (imagePath) => {
+    if (!imagePath) return "";
+    if (imagePath.startsWith("data:") || imagePath.startsWith("http")) return imagePath;
+    const baseUrl = import.meta.env.VITE_API_URL || "";
+    return `${baseUrl}${imagePath}`;
+  };
+
   return (
     <div className="product-card">
       <div className="product-image-container">
         <div className="product-image">
           {product.image ? (
             <img
-              src={product.image}
+              src={getImageUrl(product.image)}
               alt={product.productName}
             />
           ) : (

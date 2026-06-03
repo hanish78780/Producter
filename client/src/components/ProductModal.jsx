@@ -158,7 +158,12 @@ function ProductModal({
                 onChange={handleImage}
               />
               {image ? (
-                <img src={image} alt="Preview" className="upload-preview" />
+                <img src={((imagePath) => {
+                  if (!imagePath) return "";
+                  if (imagePath.startsWith("data:") || imagePath.startsWith("http")) return imagePath;
+                  const baseUrl = import.meta.env.VITE_API_URL || "";
+                  return `${baseUrl}${imagePath}`;
+                })(image)} alt="Preview" className="upload-preview" />
               ) : (
                 <>
                   <span className="upload-desc">Upload Product Images</span>
