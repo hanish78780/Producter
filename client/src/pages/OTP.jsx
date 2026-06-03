@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import logo from "../assets/images/logo.png";
+import runner from "../assets/images/runner.png";
 import "./OTP.css";
 
 function OTP() {
@@ -99,7 +100,7 @@ function OTP() {
           <img src={logo} alt="Productr Logo" className="logo-img" />
         </div>
         <div className="left-content">
-         
+          <img src={runner} alt="Runner illustration" className="runner-img" />
         </div>
       </div>
 

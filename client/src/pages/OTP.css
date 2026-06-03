@@ -143,3 +143,17 @@
 .resend-link:hover {
   text-decoration: underline;
 }
+
+.left-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.runner-img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}

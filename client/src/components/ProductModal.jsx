@@ -166,7 +166,7 @@ function ProductModal({
                 })(image)} alt="Preview" className="upload-preview" />
               ) : (
                 <>
-                  <span className="upload-desc">Upload Product Images</span>
+                  <span className="upload-desc">Enter Description</span>
                   <span className="browse-text">Browse</span>
                 </>
               )}

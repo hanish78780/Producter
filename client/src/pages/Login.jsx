@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import logo from "../assets/images/logo.png";
+import runner from "../assets/images/runner.png";
 import "./Login.css";
 
 function Login() {
@@ -48,7 +49,7 @@ function Login() {
           <img src={logo} alt="Productr Logo" className="logo-img" />
         </div>
         <div className="left-content">
-          
+          <img src={runner} alt="Runner illustration" className="runner-img" />
         </div>
       </div>
       

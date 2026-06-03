@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiHome, FiPackage, FiSearch } from "react-icons/fi";
 import { ProductContext } from "../context/ProductContext";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/Frame 4.png";
 import "./Sidebar.css";
 
 function Sidebar() {
