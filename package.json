@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Productr Fullstack MERN Application",
   "scripts": {
-    "install-server": "npm install --prefix server",
-    "install-client": "npm install --prefix client",
+    "install-server": "npm install --prefix server --include=dev",
+    "install-client": "npm install --prefix client --include=dev",
     "install-all": "npm run install-server && npm run install-client",
     "build-client": "npm run build --prefix client",
     "build": "npm run install-all && npm run build-client",
